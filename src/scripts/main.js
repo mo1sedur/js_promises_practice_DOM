@@ -54,7 +54,9 @@ const secondPromise = new Promise((resolve) => {
 
 secondPromise.then((successMessage) => {
   success(successMessage);
-});
+}).catch((errorMessage) => {
+  error(errorMessage);
+})
 
 const thirdPromise = new Promise((resolve) => {
   const successMessage = 'Third promise was resolved';
@@ -78,4 +80,6 @@ const thirdPromise = new Promise((resolve) => {
 
 thirdPromise.then((successMessage) => {
   success(successMessage);
-});
+}).catch((errorMessage) => {
+  error(errorMessage);
+})
